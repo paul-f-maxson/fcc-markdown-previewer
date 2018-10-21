@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Input = props => (
-  <div />
+  <input
+    onChange={props.onChange}
+  />
 );
 
 export default Input;
