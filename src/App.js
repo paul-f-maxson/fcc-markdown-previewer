@@ -8,7 +8,9 @@ import './App.css';
 class App extends Component {
 
   constructor(props) {
+
     super(props);
+
     // Initial state
     this.state = {
       rawText: '',
@@ -33,6 +35,7 @@ class App extends Component {
       <div className="App">
 
         <Input
+          rawText={this.state.rawText}
           onChange={this.updateRawText}
         />
 
