@@ -1,8 +1,14 @@
 import React from 'react';
 import App from './App';
 
+import './Layout.css';
+
 const Layout = props => (
-  <App />
+
+  <main id="main-box">
+    <App />
+  </main>
+
 );
 
 export default Layout;

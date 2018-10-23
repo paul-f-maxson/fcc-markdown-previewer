@@ -32,17 +32,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
+
+        <Display
+          rawText={this.state.rawText}
+        />
 
         <Input
           rawText={this.state.rawText}
           onChange={this.updateRawText}
-        />
-
-        <hr />
-
-        <Display
-          rawText={this.state.rawText}
         />
 
       </div>
