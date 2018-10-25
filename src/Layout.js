@@ -1,13 +1,21 @@
 import React from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
+
 import App from './App';
 
-import './Layout.css';
+// import './Layout.css';
 
 const Layout = props => (
 
-  <main id="main-box">
-    <App />
-  </main>
+  <Grid>
+    <Row>
+      <Col>
+        <main>
+          <App />
+        </main>
+      </Col>
+    </Row>
+  </Grid>
 
 );
 

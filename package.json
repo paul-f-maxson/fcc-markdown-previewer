@@ -7,6 +7,7 @@
     "html-react-parser": "^0.4.7",
     "react": "^16.5.2",
     "react-autosize-textarea": "^5.0.0",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5",
     "showdown": "^1.8.7"

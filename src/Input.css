@@ -1,41 +1,9 @@
-.Input {
-
-  /* Grid child */
-  grid-column: 2;
-  grid-row: 1;
-
-  /* Grid parent */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 5px;
-
-}
-
-#markdown {
-
-  /* Grid child */
-  grid-column: 1;
-  grid-row: 1;
-
-}
-
 textarea {
 
-  width: 95%;
+  width: 100%;
   height: 100%;
-  margin: 5px;
   padding: 5px;
   resize: none;
   border-radius: 10px;
-
-}
-
-.boxsizingBorder {
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 
 }

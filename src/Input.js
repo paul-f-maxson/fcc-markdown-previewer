@@ -1,33 +1,27 @@
 import React from 'react';
 import TextareaAutosize from 'react-autosize-textarea';
+import { Panel } from 'react-bootstrap';
 
 import "./Input.css";
 
 const Input = props => (
-  <div className="Input">
+  <Panel bsStyle="primary" id="markdown">
 
-    <div className="item red" id="markdown">
+    <Panel.Heading>
+      <h2>Markdown</h2>
+    </Panel.Heading>
 
-      <div className="item-heading">
-        <h2>Markdown</h2>
-      </div>
+    <Panel.Body>
+      <TextareaAutosize
+        rows={30}
+        onChange={props.onChange}
+        value={props.rawText}
+        id="editor"
+        autoFocus
+      />
+    </Panel.Body>
 
-      <div className="item-content">
-        <TextareaAutosize
-          className="boxsizingBorder"
-          rows={30}
-          onChange={props.onChange}
-          value={props.rawText}
-          id="markdown-input"
-          autoFocus
-        />
-      </div>
-
-
-    </div>
-
-
-  </div>
+  </Panel>
 );
 
 export default Input;
