@@ -3,7 +3,6 @@ import { Row, Col } from 'react-bootstrap';
 import showdown from 'showdown';
 import Parser from 'html-react-parser';
 
-
 import Input from './Input';
 import { HTMLPreview, RenderPreview } from './Presentational';
 
