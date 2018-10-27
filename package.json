@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.4",
+    "download-as-file": "^1.1.0",
     "html-react-parser": "^0.4.7",
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
