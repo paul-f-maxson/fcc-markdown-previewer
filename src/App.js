@@ -4,21 +4,44 @@ import showdown from 'showdown';
 import Parser from 'html-react-parser';
 import xss from 'xss';
 
-import Input from './Input';
 import HTMLDownloadButton from './HTMLDownloadButton';
-import { HTMLPreview, RenderPreview, Explanation } from './Presentational';
+import { Input, HTMLPreview, RenderPreview, Explanation } from './Presentational';
 
 const converter = new showdown.Converter();
+
+const defaultMarkdown = `\
+<!--- This is a comment. It will not show up in the rendering, but it will show up in the HTML. --->
+
+<!--- For that reason they are useful for explanations --->
+
+<!--- I'm using this comment to explain that what follows is an image --->
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
+
+# This is an h1 heading
+
+## This is an h2 subheading
+
+[This is a link to wikipedia](wikipedia.org)
+
+Here's some **very important bolded text**
+
+* here's \n* a \n* list
+
+> Quotes from famous people are cool.\n> This is not from a famous person but it is a quote.\n> -Me
+
+\`a().single().line().of().code();\`
+
+\`\`\`\nYou = can => (\n also()\n .render()\n .multiline()
+.code()\n);\n\`\`\`
+`;
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     // Initial state
-    this.state = {
-      rawText:
-        "<!--- This is a comment. It will not show up in the rendering, but it will show up in the HTML. --->\n\n<!--- For that reason they are useful for explanations --->\n\n<!--- I'm using this comment to explain that what follows is an image --->\n\n![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')\n\n# This is an h1 heading\n\n## This is an h2 subheading\n\n[This is a link to wikipedia](wikipedia.org)\n\nHere's some **very important bolded text**\n\n* these\n* items\n* are\n* in\n* a\n* list\n\n> Quotes from famous people are cool.\n> This is not from a famous person but it is a quote.\n> -Me\n\n`a().single().line().of().code();`\n\n```\nYou = can => (\n also()\n .render()\n .multiline()\n .code()\n);\n```",
-    };
+    this.state = { rawText: defaultMarkdown };
 
     // Callback bindings
     this.updateRawText = this.updateRawText.bind(this);

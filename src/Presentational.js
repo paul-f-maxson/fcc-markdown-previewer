@@ -1,8 +1,29 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
+import TextareaAutosize from 'react-autosize-textarea';
+
+import './Input.css';
+
+export const Input = props => (
+  <Panel bsStyle="primary" id="markdown">
+    <Panel.Heading>
+      <h2>Editor</h2>
+    </Panel.Heading>
+
+    <Panel.Body>
+      <TextareaAutosize
+        rows={30}
+        onChange={props.onChange}
+        value={props.rawText}
+        id="editor"
+        autoFocus
+      />
+    </Panel.Body>
+  </Panel>
+);
 
 export const RenderPreview = props => (
-  <Panel bsStyle="info" id="preview">
+  <Panel bsStyle="primary" id="preview">
     <Panel.Heading>
       <Panel.Title>
         <h2>Preview</h2>
@@ -14,7 +35,7 @@ export const RenderPreview = props => (
 );
 
 export const HTMLPreview = props => (
-  <Panel bsStyle="info">
+  <Panel>
     <Panel.Heading>
       <Panel.Title>
         <h2>HTML</h2>
@@ -27,7 +48,7 @@ export const HTMLPreview = props => (
 );
 
 export const Explanation = props => (
-  <Panel>
+  <Panel bsStyle="info">
     <Panel.Heading>
       <Panel.Title toggle>
         <h2>How to use this tool</h2>
