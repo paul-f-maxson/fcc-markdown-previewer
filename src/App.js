@@ -5,7 +5,7 @@ import Parser from 'html-react-parser';
 import xss from 'xss';
 
 import Input from './Input';
-import { HTMLPreview, RenderPreview } from './Presentational';
+import { HTMLPreview, RenderPreview, Explanation } from './Presentational';
 
 const converter = new showdown.Converter();
 
@@ -36,6 +36,10 @@ class App extends Component {
 
     return (
       <Row>
+        <Col xs={12}>
+          <Explanation />
+        </Col>
+
         <Col xs={12} sm={6}>
           <RenderPreview markDown={markDown} />
         </Col>

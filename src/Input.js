@@ -7,7 +7,7 @@ import './Input.css';
 const Input = props => (
   <Panel bsStyle="primary" id="markdown">
     <Panel.Heading>
-      <h2>Markdown</h2>
+      <h2>Editor</h2>
     </Panel.Heading>
 
     <Panel.Body>
