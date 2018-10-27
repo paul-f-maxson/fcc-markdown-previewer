@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import showdown from 'showdown';
 import Parser from 'html-react-parser';
+import xss from 'xss';
 
 import Input from './Input';
 import { HTMLPreview, RenderPreview } from './Presentational';
@@ -30,8 +31,8 @@ class App extends Component {
   }
 
   render() {
-    const rawHtml = converter.makeHtml(this.state.rawText);
-    const markDown = Parser(rawHtml);
+    const filteredHTML = xss(converter.makeHtml(this.state.rawText));
+    const markDown = Parser(filteredHTML);
 
     return (
       <Row>
@@ -44,7 +45,7 @@ class App extends Component {
         </Col>
 
         <Col xs={12}>
-          <HTMLPreview rawHtml={rawHtml} />
+          <HTMLPreview rawHtml={filteredHTML} />
         </Col>
       </Row>
     );
