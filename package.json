@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.4",
+    "download-as-file": "^1.1.0",
     "html-react-parser": "^0.4.7",
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
@@ -13,7 +14,8 @@
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5",
-    "showdown": "^1.8.7"
+    "showdown": "^1.8.7",
+    "xss": "^1.0.3"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
