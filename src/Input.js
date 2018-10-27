@@ -2,11 +2,10 @@ import React from 'react';
 import TextareaAutosize from 'react-autosize-textarea';
 import { Panel } from 'react-bootstrap';
 
-import "./Input.css";
+import './Input.css';
 
 const Input = props => (
   <Panel bsStyle="primary" id="markdown">
-
     <Panel.Heading>
       <h2>Markdown</h2>
     </Panel.Heading>
@@ -20,7 +19,6 @@ const Input = props => (
         autoFocus
       />
     </Panel.Body>
-
   </Panel>
 );
 
