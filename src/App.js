@@ -33,7 +33,7 @@ Here's some **very important bolded text**
 \`a().single().line().of().code();\`
 
 \`\`\`\nYou = can => (\n also()\n .render()\n .multiline()
-.code()\n);\n\`\`\`
+.code()\n);\n\`\`\`\
 `;
 
 class App extends Component {
